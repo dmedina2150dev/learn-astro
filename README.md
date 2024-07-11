@@ -38,3 +38,9 @@ Caracteristicas de Astro
 2. La comunidad va creciendo, pero no es tan grande aún
 3. La interactividad es un trabajo manual que depende de Vanilla Javascript/Typescript o UI Frameworks (Islas)
 4. Integrar frameworks o librerias de UI, requiere tener las bases de esas tecnologias.
+
+# Referencias a la Documentación Oficial
+
+[Estructura de proyecto](https://docs.astro.build/es/basics/project-structure/)
+
+[Astro preferencias](https://docs.astro.build/es/reference/cli-reference/#astro-preferences)
