@@ -1,3 +1,6 @@
 [submodule "web-blog-astro"]
 	path = web-blog-astro
 	url = git@github.com:dmedina2150dev/web-blog-astro.git
+[submodule "01-foundation"]
+	path = 01-foundation
+	url = git@github.com:dmedina2150dev/01-foundations-astro.git
