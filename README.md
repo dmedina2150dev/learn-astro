@@ -44,3 +44,28 @@ Caracteristicas de Astro
 [Estructura de proyecto](https://docs.astro.build/es/basics/project-structure/)
 
 [Astro preferencias](https://docs.astro.build/es/reference/cli-reference/#astro-preferences)
+
+
+## NOTAS:
+
+> Existen nombres de directorios reservados para Astro (Investigar nombres)
+
+> Recomendado crear los archivos de Astro que serviran de componentes con CamelCase
+
+> Existen componentes reutilizables que debemos tener la consideración anterior mencionada. 
+
+> Existen los [Layouts](https://docs.astro.build/en/basics/layouts/)
+
+> INTERESANTE DE ASTRO EN TYPESCRIPT
+```Typescript
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props
+```
+Astro infiere las props que pasamos de esta forma.
+
+
+> Guia para los [Estilos en Astro](https://docs.astro.build/en/guides/styling/)
