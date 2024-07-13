@@ -69,3 +69,18 @@ Astro infiere las props que pasamos de esta forma.
 
 
 > Guia para los [Estilos en Astro](https://docs.astro.build/en/guides/styling/)
+
+```
+<!-- No encapsulado al componente -->
+<style is:global>
+
+<!-- Astro no procesa la etiqueta y la deja tal cual como la añadimos -->
+<style is:inline>
+
+<!-- Le dice al compilador de Astro que no toque el elemento que lo deje tal cual, que lo trate como un elemento tipo texto -->
+<style is:raw>
+```
+
+> View Transitions [Doc Oficial](https://docs.astro.build/en/guides/view-transitions/)
+
+Cuando añadimos el component que lo hicimos en el head del layout, le dice al compilador de Astro que relice el pre - fetch de los de links y los enlaces de mi aplicación, para que funciones las transiciones mas rapidas.
