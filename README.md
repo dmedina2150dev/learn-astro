@@ -38,3 +38,49 @@ Caracteristicas de Astro
 2. La comunidad va creciendo, pero no es tan grande aún
 3. La interactividad es un trabajo manual que depende de Vanilla Javascript/Typescript o UI Frameworks (Islas)
 4. Integrar frameworks o librerias de UI, requiere tener las bases de esas tecnologias.
+
+# Referencias a la Documentación Oficial
+
+[Estructura de proyecto](https://docs.astro.build/es/basics/project-structure/)
+
+[Astro preferencias](https://docs.astro.build/es/reference/cli-reference/#astro-preferences)
+
+
+## NOTAS:
+
+> Existen nombres de directorios reservados para Astro (Investigar nombres)
+
+> Recomendado crear los archivos de Astro que serviran de componentes con CamelCase
+
+> Existen componentes reutilizables que debemos tener la consideración anterior mencionada. 
+
+> Existen los [Layouts](https://docs.astro.build/en/basics/layouts/)
+
+> INTERESANTE DE ASTRO EN TYPESCRIPT
+```Typescript
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props
+```
+Astro infiere las props que pasamos de esta forma.
+
+
+> Guia para los [Estilos en Astro](https://docs.astro.build/en/guides/styling/)
+
+```
+<!-- No encapsulado al componente -->
+<style is:global>
+
+<!-- Astro no procesa la etiqueta y la deja tal cual como la añadimos -->
+<style is:inline>
+
+<!-- Le dice al compilador de Astro que no toque el elemento que lo deje tal cual, que lo trate como un elemento tipo texto -->
+<style is:raw>
+```
+
+> View Transitions [Doc Oficial](https://docs.astro.build/en/guides/view-transitions/)
+
+Cuando añadimos el component que lo hicimos en el head del layout, le dice al compilador de Astro que relice el pre - fetch de los de links y los enlaces de mi aplicación, para que funciones las transiciones mas rapidas.
