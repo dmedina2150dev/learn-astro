@@ -4,3 +4,6 @@
 [submodule "01-foundation"]
 	path = 01-foundation
 	url = git@github.com:dmedina2150dev/01-foundations-astro.git
+[submodule "02-pokemon-static"]
+	path = 02-pokemon-static
+	url = git@github.com:dmedina2150dev/02-pokemon-static.git
