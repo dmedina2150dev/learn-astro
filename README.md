@@ -90,3 +90,5 @@ Cuando añadimos el component que lo hicimos en el head del layout, le dice al c
 ```
 pnpm astro add tailwind
 ```
+
+> [Docu getStaticPaths](https://docs.astro.build/en/reference/errors/get-static-paths-required/)
