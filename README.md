@@ -86,3 +86,7 @@ Astro infiere las props que pasamos de esta forma.
 Cuando añadimos el component que lo hicimos en el head del layout, le dice al compilador de Astro que relice el pre - fetch de los de links y los enlaces de mi aplicación, para que funciones las transiciones mas rapidas.
 
 > Como agregar Tailwind en Astro [Doc Oficial](https://docs.astro.build/en/guides/styling/#tailwind)
+
+```
+pnpm astro add tailwind
+```
