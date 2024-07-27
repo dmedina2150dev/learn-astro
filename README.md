@@ -81,17 +81,17 @@ Astro infiere las props que pasamos de esta forma.
 <style is:raw>
 ```
 
-> View Transitions [Doc Oficial](https://docs.astro.build/en/guides/view-transitions/)
+> View Transitions [Doc Oficial](https://docs.astro.build/es/guides/view-transitions/)
 
 Cuando añadimos el component que lo hicimos en el head del layout, le dice al compilador de Astro que relice el pre - fetch de los de links y los enlaces de mi aplicación, para que funciones las transiciones mas rapidas.
 
-> Como agregar Tailwind en Astro [Doc Oficial](https://docs.astro.build/en/guides/styling/#tailwind)
+> Como agregar Tailwind en Astro [Doc Oficial](https://docs.astro.build/es/guides/styling/#tailwind)
 
 ```
 pnpm astro add tailwind
 ```
 
-> [Docu getStaticPaths](https://docs.astro.build/en/reference/errors/get-static-paths-required/)
+> [Docu getStaticPaths](https://docs.astro.build/es/reference/errors/get-static-paths-required/)
 
 
 > Class:List
@@ -121,3 +121,5 @@ Permite enviar un lista de clases, y condicionalmente enviar o no propiedades o 
   <span class="capitalize">#{ id } { name }</span>
 </a>
 ```
+
+> Paginación estatica [Doc Oficial](https://docs.astro.build/es/reference/api-reference/#paginate)
