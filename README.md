@@ -92,3 +92,32 @@ pnpm astro add tailwind
 ```
 
 > [Docu getStaticPaths](https://docs.astro.build/en/reference/errors/get-static-paths-required/)
+
+
+> Class:List
+
+Permite enviar un lista de clases, y condicionalmente enviar o no propiedades o clases
+
+```
+<a
+  href="#"
+  class:list={[
+    `rounded  flex flex-col items-center justify-center`,
+    !isBig && 'border' --> Esto meteria el false si no se cumple
+  ]}>
+  <img src={imageUrl} alt={name}>
+  <span class="capitalize">#{ id } { name }</span>
+</a>
+
+<a
+  href="#"
+  class:list={[
+    `rounded  flex flex-col items-center justify-center`,
+    {
+			border: !isBig
+		}
+  ]}>
+  <img src={imageUrl} alt={name}>
+  <span class="capitalize">#{ id } { name }</span>
+</a>
+```
