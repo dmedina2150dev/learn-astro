@@ -123,3 +123,9 @@ Permite enviar un lista de clases, y condicionalmente enviar o no propiedades o 
 ```
 
 > Paginación estatica [Doc Oficial](https://docs.astro.build/es/reference/api-reference/#paginate)
+
+
+
+> transition:persist="nombre" --> le dice a Astro que mantenga la persistencia del estado del componente de la Isla [Doc](https://docs.astro.build/en/guides/view-transitions/#maintaining-state)
+
+> transition:persist-props --> Le dice a Astro que persita la props que le estoy mandando [Doc](https://docs.astro.build/en/guides/view-transitions/#transitionpersist-props)
