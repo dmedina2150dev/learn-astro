@@ -7,3 +7,6 @@
 [submodule "02-pokemon-static"]
 	path = 02-pokemon-static
 	url = git@github.com:dmedina2150dev/02-pokemon-static.git
+[submodule "03-blog-astro"]
+	path = 03-blog-astro
+	url = git@github.com:dmedina2150dev/03-blog-astro.git
