@@ -129,3 +129,8 @@ Permite enviar un lista de clases, y condicionalmente enviar o no propiedades o 
 > transition:persist="nombre" --> le dice a Astro que mantenga la persistencia del estado del componente de la Isla [Doc](https://docs.astro.build/en/guides/view-transitions/#maintaining-state)
 
 > transition:persist-props --> Le dice a Astro que persita la props que le estoy mandando [Doc](https://docs.astro.build/en/guides/view-transitions/#transitionpersist-props)
+
+
+> [Markdown y MDX](https://docs.astro.build/es/guides/markdown-content/)
+
+> Guia de instalación [Doc](https://docs.astro.build/es/guides/integrations-guide/mdx/)
