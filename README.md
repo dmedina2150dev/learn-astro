@@ -191,3 +191,14 @@ ejemplo
 
 pnpm create astro@latest -- --template=markhorn-dev/astro-sphere
 ```
+
+## Creación de un ENDPOINT estatico
+
+[Doc Oficial](https://docs.astro.build/es/guides/endpoints/#request)
+
+## Herramienta para RSS - Astro
+
+[Doc Oficial](https://docs.astro.build/es/guides/rss/)
+
+[Detección automatica RSS](https://docs.astro.build/es/guides/rss/#detecci%C3%B3n-autom%C3%A1tica-de-fuentes-rss)
+Permite a los navegadores y otros programas encontrar automáticamente el canal RSS de un sitio a partir de la URL principal.
