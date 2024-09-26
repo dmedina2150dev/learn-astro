@@ -1,29 +1,22 @@
-# learn-astro
+# Aprendiendo ASTRO
 
-Caracteristicas de Astro
-
-1. Rendimiento optimizado por defecto
-2. Experiencia al desarrollador
-3. SEO Friendly
-4. ECMAScript moderno y Typescript
-5. Extensibilidad y personalización
-5. Crece acorde a la necesidad
+## Caracteristicas de Astro
+  * Rendimiento optimizado por defecto
+  * Experiencia al desarrollador
+  * SEO Friendly
+  * ECMAScript moderno y Typescript
+  * Extensibilidad y personalización
+  * Crece acorde a la necesidad
 
 
 ## Código que podemos generar con Astro
+  * __Static Site Generation__: - Se genera en just in time 
+  * __Server Side Rendering__: - Renderizado del lado del servidor
+  * __Hybrid__:  - Hibrido entre STG & SSR
+  * __Multi-Page Applications__: - Es diferente a un SPA, es una aplicación con multiples páginas en las que podemos compartir estado
+  * __Client-side rendering__: - Para poder utilizar una libreria o Framework de UI
 
-1. Static Site Generation
-- Se genera en just in time 
-2. Server Side Rendering
-- Renderizado del lado del servidor
-3. Hybrid 
-- Hibrido entre STG & SSR
-4. Multi-Page Applications 
-- Es diferente a un SPA, es una aplicación con multiples páginas en las que podemos compartir estado
-5. Client-side rendering 
-- Para poder utilizar una libreria o Framework de UI
-
-## Más Herramientas
+## Herramientas que nos brinda Astro
 1. Server Actions
 2. Astro DB
 3. View Transitions
@@ -33,30 +26,31 @@ Caracteristicas de Astro
 7. Mucho más
 
 
-## Cons de Astro
+## Contras de Astro
 1. SPA's (Single page applications) no es su enfoque, para esto mejor usar los frameworks tradicionales
 2. La comunidad va creciendo, pero no es tan grande aún
 3. La interactividad es un trabajo manual que depende de Vanilla Javascript/Typescript o UI Frameworks (Islas)
 4. Integrar frameworks o librerias de UI, requiere tener las bases de esas tecnologias.
 
-# Referencias a la Documentación Oficial
+<br>
 
+## Como se estructura un proyecto en Astro
 [Estructura de proyecto](https://docs.astro.build/es/basics/project-structure/)
+
+<br>
+
+## Como gestionar las preferencias del usuario (dev)
+
+Gestiona las preferencias de usuario con el comando astro preferences
 
 [Astro preferencias](https://docs.astro.build/es/reference/cli-reference/#astro-preferences)
 
+<br>
 
-## NOTAS:
+## Inferencia de tipado a los componentes
 
-> Existen nombres de directorios reservados para Astro (Investigar nombres)
+Astro infiere las props que pasamos de esta forma.
 
-> Recomendado crear los archivos de Astro que serviran de componentes con CamelCase
-
-> Existen componentes reutilizables que debemos tener la consideración anterior mencionada. 
-
-> Existen los [Layouts](https://docs.astro.build/en/basics/layouts/)
-
-> INTERESANTE DE ASTRO EN TYPESCRIPT
 ```Typescript
 
 interface Props {
@@ -65,10 +59,12 @@ interface Props {
 
 const { title } = Astro.props
 ```
-Astro infiere las props que pasamos de esta forma.
 
 
-> Guia para los [Estilos en Astro](https://docs.astro.build/en/guides/styling/)
+## Estilos en Astros
+
+Guia para los [Estilos en Astro](https://docs.astro.build/es/guides/styling/)
+
 
 ```
 <!-- No encapsulado al componente -->
@@ -81,22 +77,7 @@ Astro infiere las props que pasamos de esta forma.
 <style is:raw>
 ```
 
-> View Transitions [Doc Oficial](https://docs.astro.build/es/guides/view-transitions/)
-
-Cuando añadimos el component que lo hicimos en el head del layout, le dice al compilador de Astro que relice el pre - fetch de los de links y los enlaces de mi aplicación, para que funciones las transiciones mas rapidas.
-
-> Como agregar Tailwind en Astro [Doc Oficial](https://docs.astro.build/es/guides/styling/#tailwind)
-
-```
-pnpm astro add tailwind
-```
-
-> [Docu getStaticPaths](https://docs.astro.build/es/reference/errors/get-static-paths-required/)
-
-
-> Class:List
-
-Permite enviar un lista de clases, y condicionalmente enviar o no propiedades o clases
+> __Class:List__ - Permite enviar un lista de clases, y condicionalmente enviar o no propiedades o clases
 
 ```
 <a
@@ -122,15 +103,73 @@ Permite enviar un lista de clases, y condicionalmente enviar o no propiedades o 
 </a>
 ```
 
-> Paginación estatica [Doc Oficial](https://docs.astro.build/es/reference/api-reference/#paginate)
+## Layouts
 
+[Doc Oficial](https://docs.astro.build/es/basics/layouts/)
 
+## View Transitions
+[Blog Info](https://astro.build/blog/future-of-astro-zero-js-view-transitions/?tw)
+[Doc Oficial](https://docs.astro.build/es/guides/view-transitions/)
 
-> transition:persist="nombre" --> le dice a Astro que mantenga la persistencia del estado del componente de la Isla [Doc](https://docs.astro.build/en/guides/view-transitions/#maintaining-state)
+Cuando añadimos el component que lo hicimos en el head del layout, le dice al compilador de Astro que relice el pre - fetch de los de links y los enlaces de mi aplicación, para que funciones las transiciones mas rapidas.
 
-> transition:persist-props --> Le dice a Astro que persita la props que le estoy mandando [Doc](https://docs.astro.build/en/guides/view-transitions/#transitionpersist-props)
+### Manteniendo el estado en las trasniciones
+[Doc Oficial](https://docs.astro.build/es/guides/view-transitions/#manteniendo-el-estado)
 
+``` 
+ /* Le dice a Astro que mantenga la persistencia 
+  * del estado del componente de la Isla 
+  */
+
+  transition:persist="nombre"
+```
+### Persistancia de las props
+[Doc Oficial](https://docs.astro.build/es/guides/view-transitions/#transitionpersist-props)
+
+Esto te permite controlar si los props de una isla deben persistir o no tras la navegación. 
+
+```
+  /* Le dice a Astro que persita la props que le estoy mandando */
+  
+  transition:persist-props
+```
+
+### Eventos del ciclo de vida de las transiciones
+[Doc Oficial](https://docs.astro.build/es/guides/view-transitions/#eventos-del-ciclo-de-vida)
+
+<br>
+
+## Como gesionar las imagenes en archivos .astro
+[Doc Oficial](https://docs.astro.build/es/guides/images/#im%C3%A1genes-en-archivos-astro)
+
+<br>
+
+## ¿Como agregar Tailwind en Astro? 
+
+[Doc Oficial](https://docs.astro.build/es/guides/styling/#tailwind)
+
+```
+pnpm astro add tailwind
+```
+<br>
+
+## Funcion para generación estatica de pages
+[Docu getStaticPaths](https://docs.astro.build/es/reference/errors/get-static-paths-required/)
+
+<br>
+
+## API Paginación estatica 
+[Doc Oficial](https://docs.astro.build/es/reference/api-reference/#paginate)
+
+<br>
+
+## Contenido con Markdown
 
 > [Markdown y MDX](https://docs.astro.build/es/guides/markdown-content/)
 
 > Guia de instalación [Doc](https://docs.astro.build/es/guides/integrations-guide/mdx/)
+
+## Directivas de Client
+[Doc Oficial](https://docs.astro.build/es/reference/directives-reference/#directivas-del-cliente)
+
+Estas directivas controlan cómo se hidratan los [componentes de framework](https://docs.astro.build/es/guides/framework-components/) en la página.
