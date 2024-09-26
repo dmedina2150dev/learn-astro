@@ -173,3 +173,21 @@ pnpm astro add tailwind
 [Doc Oficial](https://docs.astro.build/es/reference/directives-reference/#directivas-del-cliente)
 
 Estas directivas controlan cómo se hidratan los [componentes de framework](https://docs.astro.build/es/guides/framework-components/) en la página.
+
+
+## __COMO UTILIZAR LOS TEMPLATES__
+Astro cuenta con un apartado de [temas gratuitos y pagos](https://astro.build/themes/) de los cuales podemos tomar para utilizar. La forma en que podemos utilizar estos temas de forma sencilla es clicando en el boton de empezar:
+
+![image](./images/get-started.png)
+
+Esto nos llevara al repositorio del tema y podremos tomar el nombre de usuario y nombre del repositorio.
+
+Para desde la terminal ejecutar lo siguiente:
+
+```
+pnpm create astro@latest -- --template=nombre_user_github/nombre_repositorio
+
+ejemplo
+
+pnpm create astro@latest -- --template=markhorn-dev/astro-sphere
+```
