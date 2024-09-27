@@ -13,3 +13,6 @@
 [submodule "04-themes"]
 	path = 04-themes
 	url = git@github.com:dmedina2150dev/04-themes.git
+[submodule "05-astro-http"]
+	path = 05-astro-http
+	url = git@github.com:dmedina2150dev/05-astro-http.git
