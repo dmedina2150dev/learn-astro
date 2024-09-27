@@ -202,3 +202,17 @@ pnpm create astro@latest -- --template=markhorn-dev/astro-sphere
 
 [Detección automatica RSS](https://docs.astro.build/es/guides/rss/#detecci%C3%B3n-autom%C3%A1tica-de-fuentes-rss)
 Permite a los navegadores y otros programas encontrar automáticamente el canal RSS de un sitio a partir de la URL principal.
+
+## Restful API estáticos
+
+Para este funcionamiento especial, debemos crear un archivo en la carpeta **pages** o puede ser un directorio, con una sintaxis diferente, para indicarle a Astro que pude meter las manos en ese archivo cuando tengamos el proceso de construcción.
+
+**Esto en tiempo de compilación termina creando un archivo .json**
+
+```js
+/
+├ src/
+│ └─ pages/ 
+│    └─ nombre-api.json.(js, ts)
+└── .gitignore 
+```
