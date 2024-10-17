@@ -216,3 +216,50 @@ Para este funcionamiento especial, debemos crear un archivo en la carpeta **page
 │    └─ nombre-api.json.(js, ts)
 └── .gitignore 
 ```
+
+__NOTA:__ Los endpoint al igual que las pages, se generan de forma **estatica**, por lo cual si queremos que sean dinamicos es necesario que añadamos __Adapters SSR__ para que podamos enviar parametros.
+
+### Adapters Astros
+[Doc Oficial](https://docs.astro.build/es/guides/integrations-guide/)
+
+Para efectos del curso empezamos con el de [Node Adapter](https://docs.astro.build/es/guides/integrations-guide/node/)
+
+**hybrid**
+Significa que todo el contenido será generado de forma estática con la exepción de páginas que tengan el __prerender = false__
+
+```
+export default defineConfig({
+  ...
+  output: "hybrid",
+
+  adapter: node({
+    mode: 'standalone',
+  }),
+});
+```
+
+```
+export const prerender = false;
+
+export const GET: APIRoute = async ({ params, request }) => {}
+```
+
+**server**
+Significa que todo el contenido será generado del lado del servidor en el momento de la solicitud con la exepción de páginas que tengan el __prerender = true__  que se prerenderizaran en el momento de construcción
+
+```
+export default defineConfig({
+  ...
+  output: "server",
+
+  adapter: node({
+    mode: 'standalone',
+  }),
+});
+```
+
+```
+export const prerender = true;
+
+export const GET: APIRoute = async ({ params, request }) => {}
+```
