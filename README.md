@@ -263,3 +263,8 @@ export const prerender = true;
 
 export const GET: APIRoute = async ({ params, request }) => {}
 ```
+
+
+## Astro DB
+
+[Doc Oficial](https://docs.astro.build/es/guides/astro-db/)
